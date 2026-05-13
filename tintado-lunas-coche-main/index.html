@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TLC Web</title>
+    <!-- Vinculamos los estilos CSS directamente -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- El Navbar escrito directamente en HTML -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <a href="#" class="navbar-logo">
+          <img src="assets/icons/logo3.png" alt="Logo de la empresa" />
+        </a>
+
+        <!-- Botón Hamburguesa -->
+        <button class="navbar-hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="#">Inicio</a>
+          </li>
+          <li class="navbar-item dropdown">
+            <a href="#servicios">
+              Servicios 
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#tintado"><span>Tintado</span></a></li>
+              <li><a href="#vinilo"><span>Vinilo</span></a></li>
+              <li><a href="#limpieza"><span>Limpieza de interiores</span></a></li>
+              <li><a href="#rotulacion"><span>Rotulación</span></a></li>
+            </ul>
+          </li>
+          <li class="navbar-item">
+            <a href="#">Blog</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#contacto">Contacto</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#cita">Pide tu cita</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="hero-image-container">
+        <img src="assets/photos/hero1.png" alt="Imagen principal" class="hero-image" />
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="hero-content-wrapper">
+        <div class="hero-about-card">
+          <h2>Detailing de alto rendimiento</h2>
+          <p>TLC es sinónimo de Detailing profesional de primer nivel — tanto para vehículos como para embarcaciones. Cada trabajo es una declaración de calidad.</p>
+          <p>Aplicamos limpiezas en profundidad y pulidos de precisión que eliminan marcas, swirls y oxidaciones, recuperando el brillo y la textura originales. En náutica, restauramos el gelcoat dañado por la exposición solar y el entorno marino.</p>
+          <p>Sellamos cada superficie con recubrimientos cerámicos de gama alta y ceras de competición que crean una barrera hidrofóbica, rechazan la suciedad y protegen frente a rayos UV con un acabado que dura.</p>
+          <p>Trabajamos para quienes no se conforman: quienes buscan precisión, protección real y un resultado que refleje lo que su vehículo merece.</p>
+          
+          <div class="hero-btn-container">
+            <a href="#cita" class="btn-primary">Pide tu cita</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services-section">
+      
+      <!-- Servicio 1 (Tintado) -->
+      <div id="tintado" class="service-block">
+        
+        <!-- Carrusel de imágenes -->
+        <div class="service-carousel">
+          <div class="carousel-image-container">
+            <div class="carousel-track">
+              <img src="assets/photos/tintado0.png" alt="Tintado de lunas" class="carousel-slide active" />
+              <img src="assets/photos/tintado1.jpeg" alt="Tintado de lunas" class="carousel-slide" />
+              <img src="assets/photos/tintado2.png" alt="Tintado de lunas" class="carousel-slide" />
+              <img src="assets/photos/tintado3.png" alt="Tintado de lunas" class="carousel-slide" />
+              <img src="assets/photos/tintado4.png" alt="Tintado de lunas" class="carousel-slide" />
+              <img src="assets/photos/tintado5.png" alt="Tintado de lunas" class="carousel-slide" />
+              <img src="assets/photos/tintado6.png" alt="Tintado de lunas" class="carousel-slide" />
+              <img src="assets/photos/tintado7.jpeg" alt="Tintado de lunas" class="carousel-slide" />
+              
+            </div>
+            <button class="carousel-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="carousel-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <!-- Puntos (Dots) fuera de la imagen -->
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+            <span class="dot" data-index="6"></span>
+            <span class="dot" data-index="7"></span>
+          </div>
+        </div>
+
+        <!-- Contenido de texto -->
+        <div class="service-content">
+          <h2>Tintado de lunas profesional para tu vehículo</h2>
+          <h3>Láminas nano cerámicas certificadas para ITV</h3>
+          <p>
+            El tintado consiste en aplicar láminas solares de alto rendimiento sobre los cristales del vehículo para ganar privacidad, mejorar la estética y proteger el interior.
+            En TLC trabajamos con láminas nano cerámicas de alta gama con máximo bloqueo UV/UVA y elevado rechazo de calor IRR — para que el habitáculo se mantenga más fresco y confortable.
+            Sin interferencias con señales electrónicas y con homologación ITV. Cada instalación incluye certificado oficial, garantizando seguridad, legalidad y un acabado impecable.
+          </p>
+        </div>
+        <a href="#contacto" class="btn-outline">CONTÁCTANOS</a>
+
+      </div>
+      <!-- Servicio 2 (Vinilo) -->
+      <div id="vinilo" class="service-block">
+        
+        <!-- Contenido de texto (a la izquierda) -->
+        <div class="service-content">
+          <h2>Vinilado integral</h2>
+          <h3>Cambia la imagen. Protege la pintura. Destaca.</h3>
+          <p>
+            Ofrecemos una amplia selección de acabados — mate, satinado, brillo, efecto carbono y más — para transformar por completo el aspecto de tu vehículo. Nuestros vinilos de alta gama protegen la pintura original, son reversibles y se adaptan a cualquier modelo y geometría. Pide tu cita y dale a tu coche el cambio que merece.
+          </p>
+        </div>
+
+        <!-- Carrusel de imágenes (a la derecha) -->
+        <div class="service-carousel">
+          <div class="carousel-image-container">
+            <div class="carousel-track">
+              <img src="assets/photos/vinilo1.png" alt="Servicio de vinilo 1" class="carousel-slide active" />
+              <img src="assets/photos/vinilo2.png" alt="Servicio de vinilo 2" class="carousel-slide" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="carousel-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <!-- Puntos (Dots) fuera de la imagen -->
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn-outline">CONTÁCTANOS</a>
+      </div>
+      
+      <!-- Servicio 3 (Limpieza) -->
+      <div id="limpieza" class="service-block">
+        
+        <!-- Carrusel de imágenes (a la izquierda) -->
+        <div class="service-carousel">
+          <div class="carousel-image-container">
+            <div class="carousel-track">
+              <img src="assets/photos/limpieza1.webp" alt="Servicio de limpieza 1" class="carousel-slide active" />
+              <img src="assets/photos/limpieza2.webp" alt="Servicio de limpieza 2" class="carousel-slide" />
+              <img src="assets/photos/limpieza3.webp" alt="Servicio de limpieza 3" class="carousel-slide" />
+              <img src="assets/photos/limpieza4.webp" alt="Servicio de limpieza 4" class="carousel-slide" />
+              <img src="assets/photos/limpieza5.webp" alt="Servicio de limpieza 5" class="carousel-slide" />
+              <img src="assets/photos/limpieza6.webp" alt="Servicio de limpieza 6" class="carousel-slide" />
+              <img src="assets/photos/limpieza7.webp" alt="Servicio de limpieza 7" class="carousel-slide" />
+              <img src="assets/photos/limpieza8.webp" alt="Servicio de limpieza 8" class="carousel-slide" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="carousel-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <!-- Puntos (Dots) fuera de la imagen -->
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+            <span class="dot" data-index="6"></span>
+            <span class="dot" data-index="7"></span>
+          </div>
+        </div>
+
+        <!-- Contenido de texto (a la derecha) -->
+        <div class="service-content">
+          <h2>Limpieza de interiores</h2>
+          <h3>Tu interior, como el primer día.</h3>
+          <p>
+            Usamos productos profesionales específicos para cada material — cuero, tela, plásticos, techos y alfombras. El proceso incluye aspirado en profundidad, desinfección, acondicionado de cueros y eliminación de olores para devolver a tu habitáculo el aspecto y la frescura de cuando era nuevo. Sin atajos. Con el nivel de detalle que TLC aplica a cada trabajo.
+          </p>
+        </div>
+        <a href="#contacto" class="btn-outline">CONTÁCTANOS</a>
+
+      </div>
+
+      <!-- Servicio 4 (Rotulación) -->
+      <div id="rotulacion" class="service-block">
+        
+        <!-- Contenido de texto (a la izquierda) -->
+        <div class="service-content">
+          <h2>Rotulación de vinilos</h2>
+          <h3>Tu marca. Tu logo. Tu identidad — en movimiento.</h3>
+          <p>
+            En TLC diseñamos y aplicamos rotulaciones personalizadas que convierten cada vehículo en una herramienta de comunicación. Desde logotipos y textos hasta envolturas completas, trabajamos con vinilo de alta calidad y corte de precisión para garantizar un resultado nítido, duradero y fiel a tu imagen corporativa o estilo personal.
+          </p>
+        </div>
+
+        <!-- Carrusel de imágenes (a la derecha) -->
+        <div class="service-carousel">
+          <div class="carousel-image-container">
+            <div class="carousel-track">
+              <img src="assets/photos/rotulacion1.webp" alt="Servicio de rotulación 1" class="carousel-slide active" />
+              <img src="assets/photos/rotulacion2.webp" alt="Servicio de rotulación 2" class="carousel-slide" />
+              <img src="assets/photos/rotulacion3.webp" alt="Servicio de rotulación 3" class="carousel-slide" />
+              <img src="assets/photos/rotulacion4.webp" alt="Servicio de rotulación 4" class="carousel-slide" />
+              <img src="assets/photos/rotulacion5.webp" alt="Servicio de rotulación 5" class="carousel-slide" />
+            </div>
+            <button class="carousel-btn prev" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="carousel-btn next" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+          <!-- Puntos (Dots) fuera de la imagen -->
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn-outline">CONTÁCTANOS</a>
+      </div>
+
+    </section>
+
+
+    <!-- Reseñas Section -->
+    <section id="resenas" class="reviews-section">
+      <h2 class="reviews-title">Lo que dicen nuestros clientes</h2>
+      
+      <div class="reviews-grid">
+        <!-- Reseña 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="30" fill="#B4E6F0"/>
+                <path d="M15 28C15 19.1634 21.7157 12 30 12C38.2843 12 45 19.1634 45 28C45 36.8366 38.2843 44 30 44C27.5255 44 25.1895 43.3444 23.1612 42.197L16 45L17.8488 38.6472C16.0378 35.733 15 32.0163 15 28Z" fill="white"/>
+                <path d="M22 26L23.5 29H26.5L24 31L25 34L22 32L19 34L20 31L17.5 29H20.5L22 26Z" fill="#FBBF24"/>
+                <path d="M30 26L31.5 29H34.5L32 31L33 34L30 32L27 34L28 31L25.5 29H28.5L30 26Z" fill="#FBBF24"/>
+                <path d="M38 26L39.5 29H42.5L40 31L41 34L38 32L35 34L36 31L33.5 29H36.5L38 26Z" fill="#FBBF24"/>
+              </svg>
+            </div>
+            <div class="review-author">
+              <h4>Isabel Martin</h4>
+              <span>«Recomendado al 100%»</span>
+            </div>
+          </div>
+          <p>
+            Resultado espectacular con el tintado. El equipo fue puntual, cuidadoso y muy profesional. Mi coche ha quedado de otro nivel — sin dudarlo, lo recomiendo.
+          </p>
+        </div>
+
+        <!-- Reseña 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="30" fill="#B4E6F0"/>
+                <path d="M15 28C15 19.1634 21.7157 12 30 12C38.2843 12 45 19.1634 45 28C45 36.8366 38.2843 44 30 44C27.5255 44 25.1895 43.3444 23.1612 42.197L16 45L17.8488 38.6472C16.0378 35.733 15 32.0163 15 28Z" fill="white"/>
+                <path d="M22 26L23.5 29H26.5L24 31L25 34L22 32L19 34L20 31L17.5 29H20.5L22 26Z" fill="#FBBF24"/>
+                <path d="M30 26L31.5 29H34.5L32 31L33 34L30 32L27 34L28 31L25.5 29H28.5L30 26Z" fill="#FBBF24"/>
+                <path d="M38 26L39.5 29H42.5L40 31L41 34L38 32L35 34L36 31L33.5 29H36.5L38 26Z" fill="#FBBF24"/>
+              </svg>
+            </div>
+            <div class="review-author">
+              <h4>Israel Navarrete</h4>
+              <span>«Trato muy profesional»</span>
+            </div>
+          </div>
+          <p>
+            El vinilo quedó perfecto desde el primer momento. Se nota que trabajan con materiales de primera y que cada detalle importa. Atención excelente de principio a fin.
+          </p>
+        </div>
+
+        <!-- Reseña 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="30" fill="#B4E6F0"/>
+                <path d="M15 28C15 19.1634 21.7157 12 30 12C38.2843 12 45 19.1634 45 28C45 36.8366 38.2843 44 30 44C27.5255 44 25.1895 43.3444 23.1612 42.197L16 45L17.8488 38.6472C16.0378 35.733 15 32.0163 15 28Z" fill="white"/>
+                <path d="M22 26L23.5 29H26.5L24 31L25 34L22 32L19 34L20 31L17.5 29H20.5L22 26Z" fill="#FBBF24"/>
+                <path d="M30 26L31.5 29H34.5L32 31L33 34L30 32L27 34L28 31L25.5 29H28.5L30 26Z" fill="#FBBF24"/>
+                <path d="M38 26L39.5 29H42.5L40 31L41 34L38 32L35 34L36 31L33.5 29H36.5L38 26Z" fill="#FBBF24"/>
+              </svg>
+            </div>
+            <div class="review-author">
+              <h4>Marc Perez</h4>
+              <span>«¡Un acabado de 10!»</span>
+            </div>
+          </div>
+          <p>
+            Llevo el coche a limpiar aquí desde hace tiempo y siempre vuelvo. Sale impecable, como nuevo. El trabajo es meticuloso y el trato, inmejorable.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <h2>Tu coche lo merece. Tú también.</h2>
+        <p>Tintado, vinilado, limpieza de interiores, rotulación... sea cual sea el servicio que necesitas, en TLC lo hacemos con materiales de primera y resultados que se notan. No dejes que tu vehículo espere más.</p>
+        <a href="#cita" class="btn-pill">PIDE TU CITA</a>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="cita" class="contact-section">
+      <h2 class="form-title">Reserva tu cita</h2>
+      <div class="form-container">
+        <form id="contact-form" action="send_mail.php" method="POST">
+          <div class="form-group">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Tu correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca de coche</label>
+            <input type="text" id="marca" name="marca" placeholder="Marca de coche">
+          </div>
+          <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" name="modelo" placeholder="Modelo">
+          </div>
+          <div class="form-group">
+            <label for="anio">Año</label>
+            <input type="number" id="anio" name="anio" placeholder="Año">
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+          </div>
+          <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+        <div id="form-response" style="margin-top: 20px; padding: 15px; border-radius: 8px; display: none;"></div>
+      </div>
+    </section>
+
+    <!-- Footer Contact Section -->
+    <section id="contacto" class="footer-contact-section">
+      <div class="footer-contact-container">
+        <!-- Google Maps -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.665476344238!2d2.1384026!3d41.4883492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4be6f8f74780d%3A0xc3f10137996396e6!2sAv.%20d'Adam%20i%20Eva%2C%2015%2C%2008290%20Cerdanyola%20del%20Vall%C3%A8s%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1713869800000!5m2!1ses!2ses" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-container">
+          <h2>Contacta con nosotros</h2>
+          <p>¿Tienes dudas o quieres valorar tu vehículo? Escríbenos, llámanos o pásate por el taller — estamos aquí para ayudarte a sacar lo mejor de tu coche.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+34 635 38 82 98</span>
+            </div>
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+34 934 678 505</span>
+            </div>
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>lunastintado@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Av. d'Adam i Eva, 15, local 3, 08290 Cerdanyola del Vallès, Barcelona</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <!-- Logo centrado -->
+          <div class="footer-logo">
+            <img src="assets/icons/logo3.png" alt="TLC Detailing Emblem">
+          </div>
+
+          <!-- Redes sociales debajo del logo -->
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/tintados__lunas__coches/100064148806658/?name=xhp_nt__fblite__profile__tab_bar" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/tlc_tintado_lunas_coches/?hl=es" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4.162 4.162 0 1 1 0-8.324A4.162 4.162 0 0 1 12 16zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@tlc.tintadolunas" aria-label="TikTok" target="_blank" rel="noopener">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1 .05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+          </div>
+
+          <!-- Enlaces debajo de las redes -->
+          <div class="footer-nav-links">
+            <a href="aviso-legal.html" target="_blank" rel="noopener">Aviso legal y condiciones</a>
+            <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de privacidad y cookies</a>
+            <a href="mailto:lunastintado@gmail.com">Envía tu currículum</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 TLC TINTADO DE LUNAS.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vinculamos JavaScript por si quieres añadir interactividad luego -->
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

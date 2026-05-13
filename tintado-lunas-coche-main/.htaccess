@@ -1,0 +1,28 @@
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Establecer index.html como archivo predeterminado
+DirectoryIndex index.html
+
+# Redirigir "index.html" en la raíz a la URL base "/"
+RewriteCond %{THE_REQUEST} \s/index\.html [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+
+# Eliminar "index.html" de las URLs en otros directorios
+RewriteCond %{THE_REQUEST} /([^/]+)/index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [L,R=301]
+
+# Manejar URLs sin extensiones (como ".html")
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.html [L,QSA]
+
+# Protección de archivos sensibles
+<FilesMatch "^(\.htaccess|\.htpasswd|config\.php|env\.php|\.git|\.env)">
+    Require all denied
+</FilesMatch>
+
+# Redirigir solicitudes a wp-comments-post.php a la misma página de origen
+RewriteCond %{REQUEST_URI} /wp-comments-post.php$ [NC]
+RewriteCond %{HTTP_REFERER} ^(https?://[^/]+/[^/]+) [NC]
+RewriteRule ^(.*)$ %{HTTP_REFERER} [L,R=301]

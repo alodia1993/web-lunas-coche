@@ -1,0 +1,41 @@
+name: Deploy TLC (Desarrollo)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy via SFTP
+    if: true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
+      - name: Deploy via SFTP
+        run: |
+          lftp -u "${{ secrets.DEV_FTP_USERNAME }}","${{ secrets.DEV_FTP_PASSWORD }}" \
+            -e "set sftp:connect-program \"ssh -a -x -o StrictHostKeyChecking=no\"; \
+                set net:timeout 60; \
+                set net:max-retries 3; \
+                mirror --reverse --delete \
+                  --exclude-glob .git/ \
+                  --exclude-glob .github/ \
+                  --exclude-glob .vscode/ \
+                  --exclude-glob .DS_Store \
+                  --exclude-glob README.md \
+                  --exclude-glob .gitignore \
+                  --exclude-glob backup-30-01-2026/ \
+                  --exclude-glob test-deploy.html \
+                  ./ ./; \
+                quit" \
+            sftp://${{ secrets.DEV_FTP_SERVER }}:22
